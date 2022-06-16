@@ -2,10 +2,9 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
-
-        <q-toolbar-title> Quasar App </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
+        <q-toolbar-title>
+          Достопримечательности города Кондрово</q-toolbar-title
+        >
       </q-toolbar>
     </q-header>
 
@@ -16,10 +15,9 @@
 </template>
 
 <script>
-import { defineComponent} from "vue";
+import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "MainLayout",
-
 });
 </script>
