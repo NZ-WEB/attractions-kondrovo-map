@@ -9,6 +9,7 @@
 
         <app-pin type="charge" :active="active" :top="41" :left="52" @handleChange="handleChange" />
         <app-pin type="school" :active="active" :top="20" :left="53.5" @handleChange="handleChange" />
+        <app-pin type="factory" :active="active" :top="74" :left="58.5" @handleChange="handleChange" />
 
 <!--        <div class="map__pin school">-->
 <!--          <q-btn  @click="handleChange('school')" :size="getSize('school')" round :color="getColor('school')" icon="star"></q-btn>-->
@@ -17,7 +18,7 @@
 
       </div>
 
-      <the-description :title="currentTitle" :text="currentTexts"/>
+      <the-description :title="currentTitle" :text="currentTexts" :type="active"/>
 
     </div>
   </q-page>
@@ -34,6 +35,7 @@ const active = ref('school')
 
 const currentTitle = ref(data.school.title);
 const currentTexts = ref(data.school.texts);
+
 
 const handleChange = (item) => {
   currentTitle.value = data[item].title;
