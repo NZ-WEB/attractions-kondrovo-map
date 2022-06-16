@@ -3,13 +3,16 @@
     <div class="container">
       <div class="map">
         <q-img class="map__bg" src="~assets/kondr.png"/>
-        <div class="map__pin chram">
-          <q-btn @click="handleChange('charge')" :size="getSize('charge')" round :color="getColor('charge')" icon="star"></q-btn>
-        </div>
+<!--        <div class="map__pin chram">-->
+<!--          <q-btn @click="handleChange('charge')" :size="getSize('charge')" round :color="getColor('charge')" icon="star"></q-btn>-->
+<!--        </div>-->
 
-        <div class="map__pin school">
-          <q-btn  @click="handleChange('school')" :size="getSize('school')" round :color="getColor('school')" icon="star"></q-btn>
-        </div>
+        <app-pin type="charge" :active="active" :top="41" :left="52" @handleChange="handleChange" />
+        <app-pin type="school" :active="active" :top="20" :left="53.5" @handleChange="handleChange" />
+
+<!--        <div class="map__pin school">-->
+<!--          <q-btn  @click="handleChange('school')" :size="getSize('school')" round :color="getColor('school')" icon="star"></q-btn>-->
+<!--        </div>-->
 
 
       </div>
@@ -25,6 +28,7 @@
 import TheDescription from "components/TheDescription";
 import { ref } from "vue";
 import {data} from "src/data/data";
+import AppPin from "components/AppPin";
 
 const active = ref('school')
 
@@ -38,19 +42,6 @@ const handleChange = (item) => {
   active.value = item
 }
 
-const getColor = (item) => {
-  if (active.value === item) {
-    return 'red'
-  }
-  return 'primary'
-}
-
-const getSize = (item) => {
-  if (active.value === item) {
-    return 'md'
-  }
-  return 'sm'
-}
 </script>
 
 <style lang="scss">
