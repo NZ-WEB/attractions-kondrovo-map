@@ -7,11 +7,14 @@
       :color="getColor(type)"
       icon="star"
     ></q-btn>
+    <AppPinCard :type="type" v-if="active === type" />
   </div>
 </template>
 
 <script setup>
-import { computed } from "vue";
+import { data } from "src/data/data";
+import { computed, ref, toRef, watch } from "vue";
+import AppPinCard from "./AppPinCard.vue";
 
 const props = defineProps({
   type: {
@@ -27,6 +30,8 @@ const props = defineProps({
     type: String,
   },
 });
+
+const activeRef = toRef(props.active);
 
 const emits = defineEmits({
   handleChange: null,
