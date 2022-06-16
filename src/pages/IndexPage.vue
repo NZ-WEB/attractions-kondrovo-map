@@ -113,56 +113,51 @@ const handleChange = (item) => {
 
 @media (max-width: 1300px) {
   .school {
-    top: 14%!important;
+    top: 14% !important;
   }
 
   .shop {
-    top: 32%!important;
+    top: 32% !important;
   }
 
   .kondirev {
-    top: 34%!important;
+    top: 34% !important;
   }
 }
 @media (max-width: 1000px) {
   .school {
-    top: 19%!important;
+    top: 19% !important;
   }
 
   .shop {
-    top: 34%!important;
+    top: 34% !important;
   }
 
   .kondirev {
-    top: 35%!important;
+    top: 35% !important;
   }
   .charge {
-    top: 42%!important;
+    top: 42% !important;
   }
   .ploshad {
-    top: 40%!important;
-
+    top: 40% !important;
   }
 }
 @media (max-width: 760px) {
-
   .ploshad {
-    left: 67%!important;
-
+    left: 67% !important;
   }
 }
 @media (max-width: 450px) {
-
   .ploshad {
-    left: 78%!important;
-
+    left: 78% !important;
   }
   .school {
-    left: 55%!important;
+    left: 55% !important;
   }
 
   .shop {
-    left: 57%!important;
+    left: 57% !important;
   }
 }
 </style>

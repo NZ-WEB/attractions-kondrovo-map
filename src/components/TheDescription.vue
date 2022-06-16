@@ -9,7 +9,7 @@
         <q-card-section>
           <h4 class="q-my-md">{{ title }}</h4>
           <p v-for="textItem of text" :key="textItem">{{ textItem }}</p>
-          <div class="row ">
+          <div class="row">
             <div class="col-12 col-lg-6" v-for="url in images" :key="url">
               <q-img height="500px" :src="url" />
             </div>
