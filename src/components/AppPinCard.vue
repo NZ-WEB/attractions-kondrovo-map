@@ -1,13 +1,32 @@
 <template>
   <q-card v-if="isOpened" class="custom-card">
-    <q-item class="items-center">
+    <q-item class="items-center justify-between">
       <h6 class="q-my-sm">{{ activeData.title }}</h6>
-      <q-card-section>
-        <q-btn @click="setIsOpened" size="sm" round icon="close"></q-btn>
-      </q-card-section>
+      <div class="column">
+        <div>
+          <q-btn @click="setIsOpened" size="sm" round icon="close"></q-btn>
+        </div>
+        <div class="q-my-sm">
+          <q-btn color="primary" size="sm" @click="threeD = !threeD" round
+            >3D</q-btn
+          >
+        </div>
+      </div>
     </q-item>
-    <q-img :src="activeData.images[0]"> </q-img>
+    <q-img :src="activeData.images[1]"> </q-img>
   </q-card>
+
+  <q-dialog v-model="threeD">
+    <q-card>
+      <q-card-section>
+        <div class="text-h6">Секция 3D находится в стадии разработки</div>
+      </q-card-section>
+
+      <q-card-actions align="right">
+        <q-btn flat label="OK" color="primary" v-close-popup />
+      </q-card-actions>
+    </q-card>
+  </q-dialog>
 </template>
 
 <script setup>
@@ -25,6 +44,7 @@ const activeData = computed(() => {
 });
 
 const isOpened = ref(true);
+const threeD = ref(false);
 
 const setIsOpened = () => (isOpened.value = !isOpened.value);
 </script>
