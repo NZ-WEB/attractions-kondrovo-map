@@ -8,8 +8,8 @@ export const data = {
       '16 мая 2014 года был открыт памятник заслуженному учителю РСФСР, директору школы  (работавшему с 15.08.1954г. по 01.04.1986г.), ветерану ВОВ, почетному гражданину МР "Дзержинский район" Поленкову  Алексею Андреевичу.',
     ],
     images: [
+      "https://sun9-west.userapi.com/sun9-69/s/v1/if2/Qk46SjW2rST66jKb-Rdg0U50hPkVUx2oYEuMjUHcfcKnRbK4jDKy3gdA67Cm8UEjj180E4JnsnCWd3dZU-QwitUC.jpg?size=1280x818&quality=95&type=album",
       "https://avatars.mds.yandex.net/get-altay/5476806/2a0000017e45a4bd1adda839936f6c1fbc48/XXXL",
-      "https://almamater13.ru/800/600/https/content.foto.my.mail.ru/mail/nordprod75/kondrovo/h-906.jpg",
     ],
   },
   charge: {
@@ -66,8 +66,8 @@ export const data = {
       'Несколько лет назад магазин перестал быть столь популярен, на его месте был постоен продовольственный магазин "Пятерочка"',
     ],
     images: [
-      "http://photos.wikimapia.org/p/00/01/97/48/04_big.jpg",
       "http://photos.wikimapia.org/p/00/04/34/62/53_full.jpg",
+      "http://photos.wikimapia.org/p/00/01/97/48/04_big.jpg",
     ],
   },
   plotina: {
