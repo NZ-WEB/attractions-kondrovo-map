@@ -7,16 +7,33 @@
           <q-btn @click="setIsOpened" size="sm" round icon="close"></q-btn>
         </div>
         <div class="q-my-sm">
-          <q-btn color="primary" size="sm" @click="threeD = !threeD" round
-            >3D</q-btn
+          <q-btn
+            :color="threeD ? 'secondary' : 'primary'"
+            size="sm"
+            @click="threeD = !threeD"
+            round
           >
+            3D
+          </q-btn>
         </div>
       </div>
     </q-item>
-    <q-img :src="activeData.images[1]"> </q-img>
+    <q-img v-if="!threeD || !src3D" height="300px" :src="activeData.images[1]">
+    </q-img>
+
+    <div v-if="threeD" class="video">
+      <iframe
+        width="400"
+        height="220"
+        :src="src3D"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        autoplay="true"
+      ></iframe>
+    </div>
   </q-card>
 
-  <q-dialog v-model="threeD">
+  <q-dialog v-if="!src3D" v-model="threeD">
     <q-card>
       <q-card-section>
         <div class="text-h6">Секция 3D находится в стадии разработки</div>
@@ -37,6 +54,10 @@ const props = defineProps({
   type: {
     type: String,
   },
+  src3D: {
+    type: String,
+    default: null,
+  },
 });
 
 const activeData = computed(() => {
@@ -54,5 +75,9 @@ const setIsOpened = () => (isOpened.value = !isOpened.value);
   z-index: 2;
   width: 400px;
   height: 300px;
+}
+
+.video {
+  max-width: 400px;
 }
 </style>

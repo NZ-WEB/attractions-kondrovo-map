@@ -7,7 +7,7 @@
       :color="getColor(type)"
       icon="star"
     ></q-btn>
-    <AppPinCard :type="type" v-if="active === type" />
+    <AppPinCard :type="type" v-if="active === type" :src3-d="src3D" />
   </div>
 </template>
 
@@ -27,6 +27,9 @@ const props = defineProps({
     type: Number,
   },
   active: {
+    type: String,
+  },
+  src3D: {
     type: String,
   },
 });
