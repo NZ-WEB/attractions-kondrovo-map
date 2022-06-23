@@ -16,6 +16,7 @@
           :left="52"
           @handleChange="handleChange"
           class="charge"
+          src3D="https://www.youtube.com/embed/SXOJnTnjFYs?controls=0?autoplay=1"
         />
         <app-pin
           type="school"
@@ -24,6 +25,7 @@
           :left="53.5"
           @handleChange="handleChange"
           class="school"
+          src3D="https://www.youtube.com/embed/bYsiHFfskdU?controls=0"
         />
         <app-pin
           type="factory"
@@ -34,20 +36,13 @@
           class="factory"
         />
         <app-pin
-          type="kondirev"
-          :active="active"
-          :top="33"
-          :left="51"
-          @handleChange="handleChange"
-          class="kondirev"
-        />
-        <app-pin
           type="ploshad"
           :active="active"
           :top="37"
           :left="62"
           @handleChange="handleChange"
           class="ploshad"
+          src3D="https://www.youtube.com/embed/TzfcQm1GyiY?controls=0"
         />
         <app-pin
           type="shop"
@@ -56,6 +51,15 @@
           :left="54"
           @handleChange="handleChange"
           class="shop"
+        />
+        <app-pin
+          type="kondirev"
+          :active="active"
+          :top="32"
+          :left="52"
+          @handleChange="handleChange"
+          class="shop"
+          src3D="https://www.youtube.com/embed/lcIjdVnP4oI?controls=0"
         />
       </div>
 
