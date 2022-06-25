@@ -6,25 +6,24 @@
         <div>
           <q-btn @click="setIsOpened" size="sm" round icon="close"></q-btn>
         </div>
-        <div class="q-my-sm">
-          <q-btn
-            :color="threeD ? 'secondary' : 'primary'"
-            size="sm"
-            @click="threeD = !threeD"
-            round
-          >
-            3D
-          </q-btn>
-        </div>
       </div>
     </q-item>
+    <q-card-section>
+      <q-btn
+        :color="threeD ? 'secondary' : 'primary'"
+        @click="threeD = !threeD"
+        class="full-width"
+      >
+        Обзорня экскурсия
+      </q-btn>
+    </q-card-section>
     <q-img v-if="!threeD || !src3D" height="300px" :src="activeData.images[1]">
     </q-img>
 
     <div v-if="threeD" class="video">
       <iframe
         width="400"
-        height="220"
+        height="225"
         :src="src3D"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
