@@ -30,10 +30,11 @@
         <app-pin
           type="factory"
           :active="active"
-          :top="74"
-          :left="58.5"
+          :top="84"
+          :left="57"
           @handleChange="handleChange"
           class="factory"
+          src3D="https://www.youtube.com/embed/o8bqtoDv9dg?controls=0&amp;start=10"
         />
         <app-pin
           type="ploshad"
@@ -42,7 +43,7 @@
           :left="62"
           @handleChange="handleChange"
           class="ploshad"
-          src3D="https://www.youtube.com/embed/TzfcQm1GyiY?controls=0"
+          src3D="https://www.youtube.com/embed/aNX5ylMlajk?controls=0"
         />
         <app-pin
           type="shop"
@@ -51,6 +52,7 @@
           :left="54"
           @handleChange="handleChange"
           class="shop"
+          src3D="https://www.youtube.com/embed/UTHjRqYSf7Q/controls=0"
         />
         <app-pin
           type="kondirev"
