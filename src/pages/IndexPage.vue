@@ -70,8 +70,6 @@
         :text="currentTexts"
         :type="active"
       />
-
-      <p style="position: absolute; color: #fff">Автор nz-web - kann1ball</p>
     </div>
   </q-page>
 </template>

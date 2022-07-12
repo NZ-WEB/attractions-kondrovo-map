@@ -17,7 +17,7 @@
         Обзорня экскурсия
       </q-btn>
     </q-card-section>
-    <q-img v-if="!threeD || !src3D" height="300px" :src="activeData.images[1]">
+    <q-img v-if="!threeD || !src3D" height="300px" :src="activeData.images[0]">
     </q-img>
 
     <div v-if="threeD" class="video">
